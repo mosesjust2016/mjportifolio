@@ -31,18 +31,18 @@ sendEmail($email, $name, $subject, $message);
         //Server settings
        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'mail.mosesjasi.co';                     //Set the SMTP server to send through
+        $mail->Host       = 'host';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'noreply@mosesjasi.co';                     //SMTP username
-        $mail->Password   = '123@dmin#2022';                               //SMTP password
+        $mail->Username   = 'username';                     //SMTP username
+        $mail->Password   = 'password';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port       = port;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         $mail->Priority = 1;                          //Normal, 5 = low
 
         //Recipients
-        $mail->setFrom('noreply@mosesjasi.co', 'Web Form');
-        $mail->addAddress('info@mosesjasi.co', 'info');     //Add a recipient
-        $mail->addReplyTo('noreply@mosesjasi.co', 'Web Form');
+        $mail->setFrom('sending email', 'Sendinfg Email');
+        $mail->addAddress('receiving email', 'Receiving Email');     //Add a recipient
+        $mail->addReplyTo('email to reply to', 'Reply Email');
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
